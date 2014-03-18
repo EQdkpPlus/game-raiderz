@@ -22,21 +22,47 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('raiderz')) {
 	class raiderz extends game_generic {
-		public static $shortcuts = array();
+		public $version			= '0.1';
 		protected $this_game	= 'raiderz';
-		protected $types		= array('classes', 'races', 'factions', 'filters');
-		public $icons			= array('classes', 'classes_big', 'races', 'events');
+		protected $types		= array('classes', 'races', 'filters');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $factions		= array();
 		protected $filters		= array();
 		public $langs			= array('english', 'german');
 
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'race',
+				'type'		=> 'races',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'parent'	=> false
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> false
+			),
+		);
+		
+		protected $class_colors = array(
+			1	=> '#BD840A',
+			2	=> '#9C4020',
+			3	=> '#B7B7B7',
+			4	=> '#8E6D88',
+		);
+
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= false;
 		public $lang			= false;
-		public $version			= '0.1';
 
 		/**
 		* Initialises filters
@@ -56,13 +82,6 @@ if(!class_exists('raiderz')) {
 			}
 		}
 		public function get_OnChangeInfos($install=false){
-			//classcolors
-			$info['class_color'] = array(
-				1      	=> '#BD840A',
-				2    	=> '#9C4020',
-				3     	=> '#B7B7B7',
-				4    	=> '#8E6D88',
-			);
 			$info['aq'] = array();
 
 			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install
@@ -72,5 +91,4 @@ if(!class_exists('raiderz')) {
 		}
 	}
 }
-if(version_compare(PHP_VERSION, '5.3.0', '<')) registry::add_const('short_raiderz', raiderz::$shortcuts);
 ?>

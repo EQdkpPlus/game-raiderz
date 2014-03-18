@@ -28,14 +28,11 @@ $german_array = array(
 		4	=> 'Zauberer',
 	),
 	'races' => array(
-				'Unknown',
-				'Menschen',
-	),
-	'factions' => array(
-		'Standard',
+		0	=> 'Unknown',
+		1	=> 'Menschen',
 	),
 	'lang' => array(
-		'raiderz' => 'RaiderZ',
+		'raiderz'			=> 'RaiderZ',
 	),
 );
 

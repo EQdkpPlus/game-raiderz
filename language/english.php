@@ -27,16 +27,12 @@ $english_array =  array(
 		3	=> 'Cleric',
 		4	=> 'Sorcerer',
 	),
-
 	'races' => array(
-				'Unknown',
-				'Human',
-	),
-	'factions' => array(
-		'Default',
+		0	=> 'Unknown',
+		1	=> 'Human',
 	),
 	'lang' => array(
-		'raiderz' => 'RaiderZ',
+		'raiderz'			=> 'RaiderZ',
 	),
 );
 
