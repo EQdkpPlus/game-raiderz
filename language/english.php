@@ -32,7 +32,9 @@ $english_array =  array(
 		1	=> 'Human',
 	),
 	'lang' => array(
-		'raiderz'			=> 'RaiderZ',
+		'raiderz'						=> 'RaiderZ',
+		'uc_race'						=> 'Race',
+		'uc_class'						=> 'Class',
 	),
 );
 

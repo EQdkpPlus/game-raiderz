@@ -32,7 +32,9 @@ $german_array = array(
 		1	=> 'Menschen',
 	),
 	'lang' => array(
-		'raiderz'			=> 'RaiderZ',
+		'raiderz'						=> 'RaiderZ',
+		'uc_race'						=> 'Rasse',
+		'uc_class'						=> 'Klasse',
 	),
 );
 
