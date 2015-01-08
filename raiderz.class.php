@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('raiderz')) {
 	class raiderz extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '0.1';
+		public $version				= '1.0.0';
 		protected $this_game		= 'raiderz';
 		protected $types			= array('classes', 'races', 'filters');
 		protected $classes			= array();
